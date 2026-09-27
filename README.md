@@ -1,4 +1,9 @@
-# KrishiFlux
+# 🌾 KrishiFlux
+
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwind-css)
 
 > **Optimizing Every Drop. Every Watt. Every Crop.**
 >
@@ -595,5 +600,4 @@ calculation, scheduling, adaptive recommendations and savings simulation.
 **Business model:** free/affordable farmer advisory → FPO subscription dashboard →
 enterprise resource optimization → ecosystem integrations (solar pump providers,
 irrigation companies, IoT vendors, agricultural organizations).
-#   k r i s h i - f l u x  
- 
+#   k r i s h i - f l u x 
