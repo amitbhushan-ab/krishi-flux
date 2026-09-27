@@ -1,0 +1,9 @@
+node_modules/
+dist/
+scripts/.selftest.mjs
+*.local
+.DS_Store
+npm-debug.log*
+
+.vercel
+.env*

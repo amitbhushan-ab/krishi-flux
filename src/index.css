@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-soil-50 text-soil-900 antialiased;
+  font-feature-settings: 'tnum' 1;
+}
+
+@layer components {
+  .kf-card {
+    @apply rounded-2xl border border-soil-200/70 bg-white shadow-card;
+    /* Grid children default to min-width:auto, which lets a wide table inside a
+       card push the whole layout sideways on small screens. */
+    min-width: 0;
+  }
+  .kf-label {
+    @apply text-xs font-medium uppercase tracking-wide text-soil-500;
+  }
+  .kf-muted {
+    @apply text-sm text-soil-500;
+  }
+  .kf-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-leaf-500 focus-visible:ring-offset-2
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .kf-btn-primary {
+    @apply kf-btn bg-leaf-600 text-white hover:bg-leaf-700 active:bg-leaf-800;
+  }
+  .kf-btn-secondary {
+    @apply kf-btn border border-soil-200 bg-white text-soil-800 hover:bg-soil-50;
+  }
+  .kf-btn-ghost {
+    @apply kf-btn text-leaf-700 hover:bg-leaf-50;
+  }
+  .kf-input {
+    @apply w-full rounded-xl border border-soil-200 bg-white px-3 py-2 text-sm text-soil-900
+      focus:border-leaf-500 focus:outline-none focus:ring-2 focus:ring-leaf-500/20;
+  }
+  .kf-tab {
+    @apply rounded-lg px-3 py-1.5 text-sm font-medium text-soil-600 hover:bg-soil-100;
+  }
+  .kf-tab-active {
+    @apply kf-tab bg-leaf-600 text-white hover:bg-leaf-600;
+  }
+}
+
+/* Landing hero: gentle float for the sensor cards around the AI node. */
+@keyframes kf-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.kf-float {
+  animation: kf-float 6s ease-in-out infinite;
+}
+.kf-float-slow {
+  animation: kf-float 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kf-float,
+  .kf-float-slow {
+    animation: none;
+  }
+}
+
+input[type='range'] {
+  @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-soil-200;
+}
+input[type='range']::-webkit-slider-thumb {
+  @apply h-4 w-4 appearance-none rounded-full bg-leaf-600 shadow;
+}
+input[type='range']::-moz-range-thumb {
+  @apply h-4 w-4 rounded-full border-0 bg-leaf-600;
+}
